@@ -1,8 +1,8 @@
 <% if (!user_signed_in?&&!admin_signed_in?) %>
   <div class="jumbotron">
-    <h1>Your Favorite Worker Reviewed</h1>
-    <p>Hashtag hoodie mumblecore selfies. Authentic keffiyeh leggings Kickstarter, narwhal jean shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
-    <p><%= link_to "Sign Up To Write A Review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+    <h2>Your Favorite Worker Reviewed</h2>
+    <p>Give a review to the housekeeping service provided</p>
+    <p><%= link_to "Sign Up To Write A Review", new_user_registration_path, class: "btn btn-primary btn-md" %></p>
   </div>
 <% end %>
 
@@ -11,6 +11,7 @@
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
         <%= link_to (image_tag worker.image.url(:small), class: 'image'), worker %>
+        <%= link_to worker.title,worker %>
       </div>
     </div>
   <% end %>

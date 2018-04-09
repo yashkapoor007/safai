@@ -22,7 +22,9 @@
               </tr>
             </tbody>
           </table>
+          <% if user_signed_in? %>
           <%= link_to 'Write a Review', new_worker_review_path(@worker) %>
+          <% end %>
         </div>
 </div>
 <div class="col-md-7 col-md-offset-1">
@@ -32,7 +34,7 @@
           <%= link_to "Write Review", new_worker_review_path(@worker), class: "btn btn-danger" %>
         <% else %>
           <% @reviews.each do |review| %>
-            <div class="reviews">
+            <div class="panel panel-default">
               <table class="table">
                 <tbody>
                   <tr>
@@ -56,12 +58,17 @@
                     <td><strong>Rating:</strong></td>
                     <td><div class="star-rating" data-score= <%= review.rating %> ></div></td>
                   </tr>
+                  <tr>
+                    <td> <br>  </td>
+                  </tr>
                 </tbody>
               </table>
           <% end %>
         <% end %>
 </div>
+<% if admin_signed_in? %>
 <%= link_to 'Edit', edit_worker_path(@worker) %>
+<% end %>
 </div>
 </div>
 </div>
