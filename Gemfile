@@ -31,11 +31,11 @@ gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-group :development, :test do
+group :development do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'sqlite3'
 end
-group :production, :test do
+group :production  do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pg'
   gem 'rails_12factor'
