@@ -1,0 +1,42 @@
+<%= form_for(@worker) do |f| %>
+  <% if @worker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@worker.errors.count, "error") %> prohibited this worker from being saved:</h2>
+
+      <ul>
+      <% @worker.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile_no %><br>
+    <%= f.text_field :mobile_no %>
+  </div>
+  <div class="field">
+    <%= f.label :hostel %><br>
+    <%= f.text_field :hostel %>
+  </div>
+  <div class="field">
+    <div id="star-rating"></div>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+<script>
+  $('#star-rating').raty({
+    path: '/assets/',
+    scoreName: 'review[rating]'
+  });
+</script>

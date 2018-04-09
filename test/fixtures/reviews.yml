@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rating: MyString
+  name: MyString
+  mobile_no: MyString
+  time_in: 2018-04-03 00:17:07
+  time_out: 2018-04-03 00:17:07
+
+two:
+  rating: MyString
+  name: MyString
+  mobile_no: MyString
+  time_in: 2018-04-03 00:17:07
+  time_out: 2018-04-03 00:17:07
