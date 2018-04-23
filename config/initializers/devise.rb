@@ -24,7 +24,7 @@ Devise.setup do |config|
   config.confirmation_keys = [ :username ]
   config.scoped_views = true
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
-
+config.secret_key = 'd9abe74c27f722b761a2b56d08a16ef11477dfdcf32fc91a78508fbdd45f1aaa2115e0763bed45579ad55af409ed74e1f55f4f22d5c5c14e9d7e03ee92acbb18'
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
