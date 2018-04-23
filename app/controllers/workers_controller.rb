@@ -5,6 +5,9 @@ class WorkersController < ApplicationController
   # GET /workers.json
   def index
     @workers = Worker.all.includes(:reviews)
+    if current_user
+      redirect_to worker_path(current_user)
+    end
   end
 
   # GET /workers/1

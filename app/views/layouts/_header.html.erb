@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-custom" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -14,9 +14,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <% if user_signed_in? || admin_signed_in?%>
-          <li><%= link_to "New Worker", new_worker_path, class: "active" %></li>
-          <li><%= link_to "Account", edit_user_registration_path %></li>
           <% if current_admin %>
+          <li><%= link_to('Worker',workers_path)%></li>
+          <li><%= link_to "New Worker", new_worker_path, class: "active" %></li>
+          <li><%= link_to "Account", edit_admin_registration_path %></li>
           <li><%= link_to('Logout', destroy_admin_session_path, method: :delete) %></li>
           <% elsif current_user %>
           <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>

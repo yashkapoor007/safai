@@ -16,5 +16,10 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  body {
- 	background: linear-gradient(to right, #a1c4fd , #c2e9fb);
+ 	background: #fffeee;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 20px;
+ }
+ .navbar-custom {
+    background: #d5d5d5;
  }

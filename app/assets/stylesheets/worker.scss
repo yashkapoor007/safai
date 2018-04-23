@@ -1,3 +1,15 @@
 // Place all the styles related to the worker controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.panel-body{
+  	background: linear-gradient(to right, #eeeeee, #c2e9fb);
+}
+.comments-list {
+  	background: linear-gradient(to right, #eeeeee , #c2e9fb);
+    width: 80%;
+    border-bottom: 1px dotted #ccc;
+}
+p{
+  font-family: "Gill Sans", sans-serif;
+  font-size: 15px;
+}
