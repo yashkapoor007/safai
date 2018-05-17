@@ -1,16 +1,13 @@
 == Safaiapp-A room service review system
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
 * Ruby version > 4.2
 
 A student can give the sweeper review based on the work they do,admin can view the overall ratings of
 the workers.
 
-* safaiapp.herokuapp.com
+link : safaiapp.herokuapp.com
 
 
 
